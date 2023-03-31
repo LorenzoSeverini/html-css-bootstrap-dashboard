@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="100vh">
     <!-- nav bar  -->
-    <header class="container-fluid">
-        <nav class="navbar fixed'top navbar-expand navbar-dark bg-white">
+    <header>
+        <nav class="navbar navbar-expand navbar-dark bg-white my_navbar_height">
             <div class="container-fluid flex-nowrap justify-content-start">
-                <a class="navbar-brand d-none d-lg-inline-block" href="#"><img src="./img/logo.svg" alt="Logo desktop"></a>
-                <!-- <a class="navbar-brand img-fluid w-50 h-50 d-lg-none" href="#"><img src="./img/mobile-logo.png" alt="Logo mobile"></a> -->
+                <a class="navbar-brand d-none d-md-inline-block" href="#">
+                    <img class="img-fluid" src="./img/logo.svg" alt="Logo desktop">
+                </a>
+                <a class="navbar-brand" href="#">
+                    <img class="img-fluid my_height_img_logo_mobile d-md-none" src="./img/mobile-logo.png" alt="Logo mobile">
+                </a> 
                 <form class="d-flex w-100">
                     <input class="form-control me-2" type="search" placeholder="Prova a cercare: Lezioni di Laravel" aria-label="Search">
                 </form>
@@ -31,64 +35,183 @@
     </header>
 
      <!-- side menu and main content -->
-    <div class="container-fluid">
+    <main>
+        <div class="my_container_content d-flex overflow-x-hidden">
 
-        <!-- side menu -->
-        <div class="row">
-            <nav class="col-1 col-md-2 col-lg-2 d-md-block bg-light sidebar">
-                <div class="sidebar-sticky">
+            <!-- side menu -->
+            <nav>
+                <div class="d-flex flex-column justify-content-between my_sidebar">
                     <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                            <i class="fas fa-home"></i>
-                            <span class="d-none d-lg-inline-block ml-2">Home</span>
+                        <li class="nav-item text-white">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-home"></i>
+                                <span class="d-none d-lg-inline-block ml-2">Home</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item text-white">
                             <a class="nav-link" href="#">
-                            <i class="fas fa-envelope"></i>
-                            <span class="d-none d-lg-inline-block ml-2">Messages</span>
+                                <i class="fas fa-envelope"></i>
+                                <span class="d-none d-lg-inline-block ml-2">Messages</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item text-white">
                             <a class="nav-link" href="#">
-                            <i class="fas fa-bell"></i>
-                            <span class="d-none d-lg-inline-block ml-2">Notifications</span>
+                                <i class="fas fa-bell"></i>
+                                <span class="d-none d-lg-inline-block ml-2">Notifications</span>
                             </a>
                         </li>
-                        <li class="nav-item mt-auto">
+                    </ul>
+                    <ul class="nav flex-column">
+                        <li class="nav-item text-white">
                             <a class="nav-link" href="#">
-                            <i class="fas fa-cog"></i>
-                            <span class="d-none d-lg-inline-block ml-2">Settings</span>
+                                <i class="fas fa-cog"></i>
+                                <span class="d-none d-lg-inline-block ml-2">Settings</span>
                             </a>
                         </li>
                     </ul>
                 </div>
             </nav>
-
+    
             <!-- main content  -->
-            <main>
-                <div class="col-10">
+            <div class="container-fluid overflow-y-scroll">
 
+                <!-- First section title -->
+                <div class="row bg-primary text-white pt-4 pb-4">
+
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="d-flex align-items-center gap-2">
+                            <h2>Boolean</h2>
+                            <span class="badge text-white rounded-3 my_bg_color_softblue">Piano blaze</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <span class="badge text-white rounded-3 my_bg_color_softblue">3 app</span>
+                            <i class="fa-solid fa-angles-right"></i>
+                            <span class="badge text-white rounded-3 d-lg-none my_bg_color_softblue">+</span>
+                            <span class="badge text-white rounded-3 d-none d-lg-inline-block my_bg_color_softblue">Boolean mobile app</span>
+                            <span class="badge text-white rounded-3 d-none d-lg-inline-block my_bg_color_softblue">Boolean web app</span>
+                            <span class="badge text-white rounded-3 d-none d-lg-inline-block my_bg_color_softblue">Boolean blog app</span>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <h6 class="mb-0">Studenti online negli ultimi 30 minuti</h6>
+                        <span class="fs-3">125</span>
+                    </div>
+
+                    <div class="col-12 col-md-4 col-lg-4">
+                        <div class="d-flex align-items-center gap-2">
+                            <h6>Nuovo Studente</h6>
+                            <span><i class="fa-regular fa-square-plus"></i></span>
+                        </div>
+                    </div>
+
+                </div>   
+
+                <div class="row">
+                   <!-- left col  -->
+                    <div class="col-12 col-lg-8">
+                         <!-- card table  -->
+                        <div class="d-flex flex-column py-3 gap-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2>Prossime Classi</h2>
+                                </div>
+                            </div>
+                            <div class="card-body">
+
+                            </div>
+                        </div>
+                        <!-- faq  -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h2>FAQ</h2>
+                            </div>
+                            <div class="card-body">
+
+                                <!-- accordion  -->
+                                <div class="accordion accordion-flush" id="accordionFlushExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingOne">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                                Come posso accedere alle informazioni del mio account?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet tempore autem, ex quae veniam modi tempora quis veritatis vel quasi expedita architecto cum ducimus pariatur molestiae aspernatur, eaque eos? Expedita.</div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                                Come posso accedere alle informazioni del mio account?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere temporibus fuga similique eligendi recusandae harum. Totam distinctio nisi reprehenderit quas necessitatibus quasi iusto, earum eius pariatur aspernatur, inventore asperiores a.</div>
+                                         </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="flush-headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                                Posso usare questa dashboard da mobile?
+                                            </button>
+                                        </h2>
+                                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                            <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus omnis cumque eius id nam maxime, illo at nostrum, perspiciatis inventore, rem facilis quod saepe facere eum cum quam explicabo quis.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- right col  -->
+                    <div class="col-12 col-lg-4">
+                        <div class="d-flex flex-column py-3 gap-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2>TO DO</h2>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Default checkbox
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Checked checkbox
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="img/stats.jpeg" alt="tabella statistica">
+                            <div class="card-body">
+                                <p class="card-title fs-3">Utenti attivi</p>
+                                <p class="card-text">Lista degli utenti attivi in piattaforma nell'ultimo mese</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Gennaio 1200</li>
+                                <li class="list-group-item">Febbraio 800</li>
+                                <li class="list-group-item">Marzo 1500</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="#" class="card-link">Visualizza report approfondito</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-            </main>
-        </div>    
-    </div>
-    
 
-
-
-      
-      
-      
-      
-    
-
-
+            </div> 
+        </div>
+    </main>
+   
     <!-- js  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</body>
 </html>
