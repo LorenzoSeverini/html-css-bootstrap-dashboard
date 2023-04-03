@@ -48,12 +48,9 @@ ul {
 .my_sidebar { 
     width: 9.375rem;
     background-image: url(../img/sidebar-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    background-size: cover;
-    background: rgba(12, 48, 80, 0.815);
+    background-repeat: no-repeat;
 }
 
-.my_flex_grow_1 { flex-grow: 1;}
 
